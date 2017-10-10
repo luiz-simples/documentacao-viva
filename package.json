@@ -1,0 +1,29 @@
+{
+  "name": "documentacao-viva",
+  "version": "0.0.1",
+  "description": "Exemplo de documentação viva com Nightwatch e Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luiz-simples/documentacao-viva.git"
+  },
+  "keywords": [
+    "documentação",
+    "viva",
+    "live-documentation",
+    "nightwatch",
+    "cucumber",
+    "tests",
+    "test",
+    "gherkin"
+  ],
+  "author": "Luiz Amorim <luiz.simples@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/luiz-simples/documentacao-viva/issues"
+  },
+  "homepage": "https://github.com/luiz-simples/documentacao-viva#readme"
+}
