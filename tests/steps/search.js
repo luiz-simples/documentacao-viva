@@ -5,4 +5,8 @@ defineSupportCode(({Given: Dado, Then: Entao, When}) => {
   Entao(/^o formulário de busca do google deve estar presente$/, () => client
     .assert.visible('input[name="q"]')
   )
+
+  Entao(/^o formulário de busca do Yahoo deve estar presente$/, () => client
+    .assert.visible('input[name="p"]')
+  )
 })

@@ -1,5 +1,62 @@
 [
   {
+    "description": "  Enquanto um usuário administrador do sistema\n  Eu quero criar páginas institucionais\n  Afim de disponibilizar maiores informações aos meus clientes.",
+    "keyword": "Funcionalidade",
+    "name": "Criar Páginas",
+    "line": 3,
+    "id": "criar-páginas",
+    "tags": [],
+    "uri": "tests/features/criar-pagina.feature",
+    "elements": [
+      {
+        "id": "criar-páginas;criar-página-com-texto",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Criar Página com texto",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 9,
+            "name": "eu sou administrador do sistema",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Quando ",
+            "line": 10,
+            "name": "eu acessar criação de página",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 11,
+            "name": "devo poder criar uma página com texto",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 12,
+            "name": "ver essa página no site público no ar",
+            "result": {
+              "status": "undefined"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "description": "  Enquanto um usuário em busca de informações.\n  Eu quero acessar formulários de busca.",
     "keyword": "Funcionalidade",
     "name": "Buscar no Google",
@@ -26,7 +83,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2827
+              "duration": 2838
             }
           },
           {
@@ -39,7 +96,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15
+              "duration": 20
             }
           },
           {
@@ -52,7 +109,67 @@
             },
             "result": {
               "status": "passed",
-              "duration": 55
+              "duration": 83
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "  Enquanto um usuário em busca de informações.\n  Eu quero acessar formulários de busca.",
+    "keyword": "Funcionalidade",
+    "name": "Buscar no Yahoo",
+    "line": 3,
+    "id": "buscar-no-yahoo",
+    "tags": [],
+    "uri": "tests/features/yahoo-search.feature",
+    "elements": [
+      {
+        "id": "buscar-no-yahoo;buscar-através-do-yahoo",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Buscar através do Yahoo",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 8,
+            "name": "que eu posso abrir a página do \"Yahoo.com\"",
+            "match": {
+              "location": "tests/steps/global.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13139
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 9,
+            "name": "o título da página deve ser \"Yahoo\"",
+            "match": {
+              "location": "tests/steps/global.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "o formulário de busca do Yahoo deve estar presente",
+            "match": {
+              "location": "tests/steps/search.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61
             }
           }
         ]
