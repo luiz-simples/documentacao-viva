@@ -1,0 +1,62 @@
+[
+  {
+    "description": "  Enquanto um usuário em busca de informações.\n  Eu quero acessar formulários de busca.",
+    "keyword": "Funcionalidade",
+    "name": "Buscar no Google",
+    "line": 3,
+    "id": "buscar-no-google",
+    "tags": [],
+    "uri": "tests/features/google-search.feature",
+    "elements": [
+      {
+        "id": "buscar-no-google;buscar-através-do-google",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Buscar através do Google",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 8,
+            "name": "que eu posso abrir a página do \"Google.com\"",
+            "match": {
+              "location": "tests/steps/global.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2827
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Então ",
+            "line": 9,
+            "name": "o título da página deve ser \"Google\"",
+            "match": {
+              "location": "tests/steps/global.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 10,
+            "name": "o formulário de busca do google deve estar presente",
+            "match": {
+              "location": "tests/steps/search.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

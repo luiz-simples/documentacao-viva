@@ -1,0 +1,30 @@
+version: '3.2'
+
+services:
+  application:
+    image: node:8.7
+    hostname: 'application'
+    container_name: application
+    extra_hosts:
+      - "selenium.dev:155.3.75.33"
+    networks:
+      intranet:
+        ipv4_address: 155.3.75.31
+
+  selenium:
+    image: selenium/standalone-chrome
+    hostname: 'selenium'
+    container_name: selenium
+    extra_hosts:
+      - "application.dev:155.3.75.31"
+    networks:
+      intranet:
+        ipv4_address: 155.3.75.33
+
+networks:
+  intranet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 155.3.75.0/24

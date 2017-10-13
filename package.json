@@ -4,7 +4,7 @@
   "description": "Exemplo de documentação viva com Nightwatch e Cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch"
+    "test": "nightwatch && cd ./tests && node report.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,13 @@
   "bugs": {
     "url": "https://github.com/luiz-simples/documentacao-viva/issues"
   },
-  "homepage": "https://github.com/luiz-simples/documentacao-viva#readme"
+  "homepage": "https://github.com/luiz-simples/documentacao-viva#readme",
+  "devDependencies": {
+    "cucumber": "^3.0.4",
+    "chromedriver": "^2.33.1",
+    "cucumber-html-reporter": "^3.0.4",
+    "nightwatch": "^0.9.16",
+    "nightwatch-cucumber": "^8.2.3",
+    "selenium-server": "^3.6.0"
+  }
 }
