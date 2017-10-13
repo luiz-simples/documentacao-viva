@@ -14,24 +14,23 @@ module.exports = {
   live_output: false,
   disable_colors: false,
 
-  selenium: {
-    start_process: true,
-    server_path: seleniumServer.path,
-    log_path: './tests',
-    host: '127.0.0.1',
-    port: 4444
-  },
-
   test_workers: {
     enabled: true,
     workers: 'auto'
+  },
+
+  selenium: {
+    server_path: seleniumServer.path,
+    log_path: './tests',
+    host: 'selenium.dev',
+    port: 4444
   },
 
   test_settings: {
     default: {
       launch_url: 'http://localhost:8087',
       selenium_port: 4444,
-      selenium_host: '127.0.0.1',
+      selenium_host: 'selenium.dev',
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,

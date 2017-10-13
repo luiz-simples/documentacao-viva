@@ -1,30 +1,23 @@
-version: '3.2'
+version: '2'
 
 services:
   application:
-    image: node:8.7
+    build: .
+    image: doc-live
     hostname: 'application'
+    working_dir: /home/node/app
+    network_mode: bridge
     container_name: application
-    extra_hosts:
-      - "selenium.dev:155.3.75.33"
-    networks:
-      intranet:
-        ipv4_address: 155.3.75.31
+    volumes:
+      - $HOME/.ssh:/home/node/.ssh
+      - $HOME/.gitconfig:/home/node/.gitconfig
+      - $PWD/.bashrc:/home/node/.bashrc
+      - $PWD:/home/node/app
+    links:
+      - "selenium:selenium.dev"
 
   selenium:
     image: selenium/standalone-chrome
     hostname: 'selenium'
+    network_mode: bridge
     container_name: selenium
-    extra_hosts:
-      - "application.dev:155.3.75.31"
-    networks:
-      intranet:
-        ipv4_address: 155.3.75.33
-
-networks:
-  intranet:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-      - subnet: 155.3.75.0/24

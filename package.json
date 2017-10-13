@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npm-run-all clear nightwatch report --continue-on-error",
+    "test-docker": "npm-run-all clear nightwatch-docker report --continue-on-error",
     "clear": "rm -Rf ./tests/reports",
     "nightwatch": "./node_modules/.bin/nightwatch",
+    "nightwatch-docker": "./node_modules/.bin/nightwatch --config nightwatch.docker.conf.js",
     "report": "cd ./tests && node report.js"
   },
   "repository": {
